@@ -157,12 +157,14 @@ class Boy:
         return self.x - 20, self.y - 50, self.x + 20, self.y + 50
 
     def handle_collision(self, group, other):
-        pass
+        if group == 'boy:ball':
+            pass
 
 class Ball:
     def __init__(self):
         self.image = load_image('ball21x21.png')
-        self.x, self.y = 100, 100
+        self.x = 0
+        self.y = 0
         pass
 
     def update(self):
@@ -174,7 +176,8 @@ class Ball:
         draw_rectangle(*self.get_bb())
 
     def get_bb(self):
-        return self.x - 20, self.y - 50, self.x + 20, self.y + 50
+        return self.x - 20, self.y - 20, self.x + 20, self.y + 20
 
     def handle_collision(self, group, other):
-        pass
+        if group == 'boy:ball':
+            game_world.remove_object(self)
