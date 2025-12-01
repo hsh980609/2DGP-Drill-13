@@ -158,3 +158,21 @@ class Boy:
 
     def handle_collision(self, group, other):
         pass
+
+class Ball:
+    def __init__(self):
+        self.image = load_image('ball21x21.png')
+        pass
+
+    def update(self):
+        pass
+
+
+    def draw(self):
+        pass
+
+    def get_bb(self):
+        return self.x - 20, self.y - 50, self.x + 20, self.y + 50
+
+    def handle_collision(self, group, other):
+        pass
