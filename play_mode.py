@@ -35,8 +35,8 @@ def init():
     common.ball = Ball()
     for i in range(100):
         ball = Ball()
-        ball.x = random.randint(100, 800)
-        ball.y = random.randint(100, 800)
+        ball.x = random.randint(100, 1600)
+        ball.y = random.randint(100, 1600)
         game_world.add_object(ball, 1)
         game_world.add_collision_pair('boy:ball', None, ball)
 

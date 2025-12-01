@@ -175,7 +175,6 @@ class Ball:
         sx = self.x - common.court.window_left
         sy = self.y - common.court.window_bottom
         self.image.draw(sx, sy)
-        draw_rectangle(*self.get_bb())
 
     def get_bb(self):
         return self.x - 10, self.y - 10, self.x + 10, self.y + 10
