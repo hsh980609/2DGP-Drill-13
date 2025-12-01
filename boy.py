@@ -162,6 +162,7 @@ class Boy:
 class Ball:
     def __init__(self):
         self.image = load_image('ball21x21.png')
+        self.x, self.y = 100, 100
         pass
 
     def update(self):
@@ -169,7 +170,8 @@ class Ball:
 
 
     def draw(self):
-        pass
+        self.image.draw(self.x, self.y)
+        draw_rectangle(*self.get_bb())
 
     def get_bb(self):
         return self.x - 20, self.y - 50, self.x + 20, self.y + 50
